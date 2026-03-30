@@ -1,61 +1,62 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Nav() {
   return (
     <nav className="nav">
-      <Links />
-      <Logo />
+      <p className="nav__header">JOSE D. RIOS</p>
+      <div className="nav__body">
+        <Links />
+        <Logo />
+      </div>
     </nav>
   );
 }
 
+const links = [
+  {
+    value: "home",
+    href: "/",
+  },
+  {
+    value: "projects",
+    href: "/",
+  },
+  {
+    value: "blog",
+    href: "/",
+  },
+  {
+    value: "mind",
+    href: "/",
+  },
+  {
+    value: "body",
+    href: "/",
+  },
+  {
+    value: "material",
+    href: "/",
+  },
+  {
+    value: "github",
+    href: "/",
+  },
+  {
+    value: "linkedin",
+    href: "/",
+  },
+  {
+    value: "resume",
+    href: "/",
+  },
+  {
+    value: "contact",
+    href: "/",
+  },
+];
 function Links() {
-  const links = [
-    {
-      value: "home",
-      href: "/",
-    },
-    {
-      value: "projects",
-      href: "/",
-    },
-    {
-      value: "blog",
-      href: "/",
-    },
-    {
-      value: "mind",
-      href: "/",
-    },
-    {
-      value: "body",
-      href: "/",
-    },
-    {
-      value: "material",
-      href: "/",
-    },
-    {
-      value: "github",
-      href: "/",
-    },
-    {
-      value: "linkedin",
-      href: "/",
-    },
-    {
-      value: "resume",
-      href: "/",
-    },
-    {
-      value: "contact",
-      href: "/",
-    },
-  ];
-
   return (
     <ul className="nav__links">
       {links.map((link) => (
@@ -68,28 +69,38 @@ function Links() {
 }
 
 function Logo() {
-  const [imageIndex, setImageIndex] = useState<number>(1);
+  const [digits, setDigits] = useState<string[]>([...Array(2000).fill(0)]);
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      setImageIndex((prev) => {
-        if (prev === 5) {
-          return 1;
-        } else {
-          return prev + 1;
-        }
-      });
-    }, 250);
-    return () => clearInterval(interval);
+    const digitRandomizer = setInterval(() => {
+      const temp = [
+        ...Array(8).fill("J"),
+        ...Array(250).fill(0),
+        ...Array(250).fill(1),
+      ];
+
+      // fisher yates shuffle thingy, whats a man got to do to get a simple shuffle func
+      for (let i = temp.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [temp[i], temp[j]] = [temp[j], temp[i]];
+      }
+      setDigits(temp);
+    }, 750);
+    return () => clearInterval(digitRandomizer);
   }, []);
+
   return (
-    <div className="nav__logo">
-      <Image
-        src={`/PNG_000${imageIndex}.png`}
-        width={100}
-        height={100}
-        alt="testing"
-      />
-      <p className="nav__logo-text">JOSE D. RIOS</p>
+    <div className="nav__logo-container">
+      <p className="nav__binary">
+        {digits.map((digit, i) => (
+          <span
+            className={`${digit === "J" ? "binary-j" : ""} binary-digit`}
+            key={i}
+          >
+            {digit}
+          </span>
+        ))}
+      </p>
     </div>
   );
 }

@@ -1,6 +1,20 @@
 .nav {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  overflow: hidden;
+}
+
+.nav__header {
+  font-size: var(--font-size-sm);
+  margin-left: auto;
+  color: var(--color-foreground-primary);
+}
+
+.nav__body {
+  display: flex;
+  display: row;
+  overflow: hidden;
 }
 
 .nav__links {
@@ -8,19 +22,38 @@
   flex-direction: row;
   flex-wrap: wrap;
   max-width: 300px;
-  gap: var(--spacing-1) 0;
+  gap: var(--spacing-1_5) 0;
 }
 
 .nav__link {
   width: 50%;
 }
 
-.nav__logo {
-  margin: auto;
-  display: flex;
-  flex-direction: column;
+.nav__logo-container {
+  border: 2px solid var(--color-border-default);
+  height: auto;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
-.nav__logo-text {
-  font-size: var(--font-size-sm);
+.nav__binary {
+  position: absolute;
+  width: 110%;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+
+.binary-digit {
+  color: var(--color-foreground-default-subtle);
+  padding: var(--spacing-0_5);
+
+  &:hover {
+    color: var(--color-foreground-primary);
+    cursor: default;
+  }
+}
+
+.binary-j {
+  color: var(--color-foreground-primary);
 }

@@ -26,12 +26,15 @@
 
   /* foregrounds */
   --color-foreground-default: white;
+  --color-foreground-default-subtle: hsl(var(--gray-400));
   --color-foreground-inverted: hsl(var(--gray-1000));
-  --color-foreground-primary: hsl(var(--yellow-500));
+  --color-foreground-primary: hsl(var(--yellow-400));
+  --color-foreground-primary-subtle: hsl(var(--yellow-400));
 
   /* backgrounds  */
   --color-background-default: hsl(var(--gray-1000));
-  --color-background-primary: hsl(var(--yellow-500));
+  --color-background-primary: hsl(var(--yellow-400));
 
   /* borders  */
+  --color-border-default: white;
 }
