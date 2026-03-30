@@ -4,7 +4,7 @@
   --font-size-sm: 0.875rem;
   --font-size-md: 1rem;
   --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
+  --font-size-xl: 1.3rem;
   --font-size-2xl: 1.5rem;
   --font-size-3xl: 2rem;
 
@@ -26,15 +26,23 @@ body {
 }
 
 h1 {
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
   letter-spacing: var(--letter-spacing-wide);
+  margin: var(--spacing-6) 0;
 }
 
 h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
+  margin: var(--spacing-4) 0;
+}
+
+h3 {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-normal);
-  letter-spacing: var(--letter-spacing-wide);
+  margin: var(--spacing-2) 0;
 }
 
 p,

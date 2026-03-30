@@ -21,7 +21,7 @@ const links = [
   },
   {
     value: "projects",
-    href: "/",
+    href: "/projects",
   },
   {
     value: "blog",

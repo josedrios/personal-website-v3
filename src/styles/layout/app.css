@@ -6,8 +6,13 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-8);
+  gap: var(--spacing-20);
   margin: auto;
   max-width: var(--breakpoint-md);
   width: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
 }
