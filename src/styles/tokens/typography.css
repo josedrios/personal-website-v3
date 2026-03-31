@@ -31,20 +31,17 @@ h1 {
   font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-semibold);
   letter-spacing: var(--letter-spacing-wide);
-  margin: var(--spacing-6) 0;
 }
 
 h2 {
   font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-semibold);
   letter-spacing: var(--letter-spacing-wide);
-  margin: var(--spacing-4) 0;
 }
 
 h3 {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-normal);
-  margin: var(--spacing-2) 0;
 }
 
 p,

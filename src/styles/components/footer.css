@@ -1,4 +1,5 @@
 .footer {
+  margin-top: auto;
   padding-top: var(--spacing-4);
   display: flex;
   flex-direction: column;
@@ -15,10 +16,12 @@
   a {
     font-size: var(--font-size-sm);
     color: var(--color-foreground-default-subtle);
+    text-decoration-color: var(--color-foreground-default-subtle);
   }
 }
 
 .footer__copyright {
+  margin-top: var(--spacing-2);
   text-align: center;
   font-size: var(--font-size-sm);
   color: var(--color-foreground-default-subtle);

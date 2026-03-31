@@ -5,8 +5,8 @@ export default function Footer() {
   return (
     <footer className="footer">
       <Links />
-      <p className="footer__copyright">Copyright © 2025 Jose De Jesus Rios</p>
       <Quote>A stone amid the waves -Lorn au Arcos</Quote>
+      <p className="footer__copyright">Copyright © 2025 Jose De Jesus Rios</p>
     </footer>
   );
 }
