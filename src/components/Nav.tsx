@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Nav() {
@@ -14,58 +15,77 @@ export default function Nav() {
   );
 }
 
-const links = [
+type LinkType = {
+  value: string;
+  href: string;
+  external?: boolean;
+  download?: boolean;
+};
+
+const links: LinkType[] = [
   {
     value: "home",
     href: "/",
+  },
+  {
+    value: "blog",
+    href: "/blog",
   },
   {
     value: "projects",
     href: "/projects",
   },
   {
-    value: "blog",
-    href: "/",
-  },
-  {
     value: "now",
-    href: "/",
-  },
-  {
-    value: "mind",
-    href: "/",
-  },
-  {
-    value: "stuff",
-    href: "/",
+    href: "/now",
   },
   {
     value: "body",
-    href: "/",
+    href: "/body",
   },
   {
-    value: "linkedin",
-    href: "/",
+    value: "mind",
+    href: "/mind",
+  },
+  {
+    value: "stuff",
+    href: "/stuff",
   },
   {
     value: "resume",
-    href: "/",
+    href: "/files/Resume.pdf",
+    download: true,
   },
   {
     value: "contact",
-    href: "/",
+    href: "/contact",
+  },
+  {
+    value: "linkedin",
+    href: "https://www.linkedin.com/in/josederios/",
+    external: true,
   },
   {
     value: "github",
-    href: "/",
+    href: "https://github.com/josedrios",
+    external: true,
   },
 ];
 function Links() {
+  const pathName = usePathname();
+  console.log(pathName);
   return (
     <ul className="nav__links">
       {links.map((link) => (
-        <li className="nav__link" key={link.value}>
-          <Link href={link.href}>{link.value.toUpperCase()}</Link>
+        <li className="nav__link-container" key={link.value}>
+          <Link
+            className={`nav__link ${pathName === link.href ? "nav__link--active" : ""}`}
+            href={link.href}
+            target={link.external ? "_blank" : undefined}
+            download={link.download ?? undefined}
+          >
+            {link.value.toUpperCase()}
+          </Link>
         </li>
       ))}
     </ul>

@@ -13,7 +13,8 @@
   justify-content: center;
   gap: var(--spacing-4);
 
-  a {
+  a,
+  button {
     font-size: var(--font-size-sm);
     color: var(--color-foreground-default-subtle);
     text-decoration-color: var(--color-foreground-default-subtle);

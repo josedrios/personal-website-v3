@@ -30,13 +30,14 @@ export default function Home() {
       </p>
       <Header type={2}>Recommendation</Header>
       <p>
-        I would recommend reading/stalking through my website with{" "}
-        <Link href={"/"}>this track</Link> pouring into your ears.
+        If you feel like stalking through the rest of my website I would
+        recommend doing so with <Link href={"/"}>this track</Link> pouring into
+        your ears.
       </p>
       <Header type={2}>Apology</Header>
       <p>
         I would like to apologize for the big heaping pile of garbage you just
-        read above. these are just the words that made the most sense when it
+        read above. These are just the words that made the most sense when it
         came time to write this portion of the website. i would like to
         apologize for the blabberfest I had, and will continue to have because I
         know for a fact that my <Link href={"/blog"}>blogs</Link> are 100%

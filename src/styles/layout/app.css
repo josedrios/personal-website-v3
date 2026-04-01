@@ -3,7 +3,6 @@ html {
   width: 100vw;
   overflow-y: scroll;
   padding: var(--spacing-10) var(--spacing-15);
-  padding-bottom: var(--spacing-10);
 }
 
 body {
@@ -35,5 +34,17 @@ main {
 
   p {
     padding: var(--spacing-3) 0;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    padding: var(--spacing-7) !important;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    padding: var(--spacing-5) !important;
   }
 }

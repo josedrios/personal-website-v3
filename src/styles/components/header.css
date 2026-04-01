@@ -1,7 +1,7 @@
 .header-prefix {
   color: var(--color-foreground-primary);
   padding-right: var(--spacing-1_5);
-  transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
 }
 
 .show-cursor {

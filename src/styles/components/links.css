@@ -1,4 +1,8 @@
-a {
+a,
+button {
+  font-family: inherit;
+  border: transparent;
+  background: transparent;
   color: var(--color-foreground-default);
   text-decoration: underline;
   text-decoration-thickness: 2px;

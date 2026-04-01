@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import Quote from "./Quote";
 
@@ -15,13 +16,27 @@ function Links() {
   return (
     <ul className="footer__links">
       <li>
-        <Link href={"/"}>Back To Top</Link>
+        <button
+          className="scroll-to-top"
+          onClick={() =>
+            window.scrollTo({ left: 0, top: 0, behavior: "smooth" })
+          }
+        >
+          Back To Top
+        </button>
       </li>
       <li>
-        <Link href={"/"}>LinkedIn</Link>
+        <Link target="_blank" href={"https://www.linkedin.com/in/josederios/"}>
+          LinkedIn
+        </Link>
       </li>
       <li>
-        <Link href={"/"}>Github</Link>
+        <Link target="_blank" href={"https://github.com/josedrios"}>
+          Github
+        </Link>
+      </li>
+      <li>
+        <Link href={"/contact"}>Contact</Link>
       </li>
     </ul>
   );
