@@ -27,3 +27,14 @@
   font-size: var(--font-size-sm);
   color: var(--color-foreground-default-subtle);
 }
+
+@media (max-width: 360px) {
+  .footer__links {
+    flex-wrap: wrap;
+  }
+
+  .footer__links a,
+  button {
+    font-size: var(--font-size-xs) !important;
+  }
+}

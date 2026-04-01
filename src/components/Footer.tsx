@@ -26,12 +26,20 @@ function Links() {
         </button>
       </li>
       <li>
-        <Link target="_blank" href={"https://www.linkedin.com/in/josederios/"}>
+        <Link
+          rel="noopener noreferrer"
+          target="_blank"
+          href={"https://www.linkedin.com/in/josederios/"}
+        >
           LinkedIn
         </Link>
       </li>
       <li>
-        <Link target="_blank" href={"https://github.com/josedrios"}>
+        <Link
+          rel="noopener noreferrer"
+          target="_blank"
+          href={"https://github.com/josedrios"}
+        >
           Github
         </Link>
       </li>

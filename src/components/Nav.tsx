@@ -28,43 +28,13 @@ const links: LinkType[] = [
     href: "/",
   },
   {
+    value: "github",
+    href: "https://github.com/josedrios",
+    external: true,
+  },
+  {
     value: "blog",
     href: "/blog",
-  },
-  {
-    value: "projects",
-    href: "/projects",
-  },
-  {
-    value: "now",
-    href: "/now",
-  },
-  {
-    value: "body",
-    href: "/body",
-  },
-  {
-    value: "stuff",
-    href: "/stuff",
-  },
-  {
-    value: "movies",
-    href: "https://letterboxd.com/Toro404/",
-    external: true,
-  },
-  {
-    value: "books",
-    href: "https://www.goodreads.com/user/show/194052960-big-chungus",
-    external: true,
-  },
-  {
-    value: "resume",
-    href: "/files/Resume.pdf",
-    download: true,
-  },
-  {
-    value: "contact",
-    href: "/contact",
   },
   {
     value: "linkedin",
@@ -72,14 +42,39 @@ const links: LinkType[] = [
     external: true,
   },
   {
-    value: "github",
-    href: "https://github.com/josedrios",
+    value: "projects",
+    href: "/projects",
+  },
+  {
+    value: "movies",
+    href: "https://letterboxd.com/Toro404/",
     external: true,
+  },
+  {
+    value: "now",
+    href: "/now",
+  },
+  {
+    value: "books",
+    href: "https://www.goodreads.com/user/show/194052960-big-chungus",
+    external: true,
+  },
+  {
+    value: "contact",
+    href: "/contact",
+  },
+  {
+    value: "resume",
+    href: "/files/Resume.pdf",
+    download: true,
+  },
+  {
+    value: "jose",
+    href: "/jose",
   },
 ];
 function Links() {
   const pathName = usePathname();
-  console.log(pathName);
   return (
     <ul className="nav__links">
       {links.map((link) => (
@@ -88,9 +83,11 @@ function Links() {
             className={`nav__link ${pathName === link.href ? "nav__link--active" : ""}`}
             href={link.href}
             target={link.external ? "_blank" : undefined}
+            rel={link.external ? "noopener noreferrer" : undefined}
             download={link.download ?? undefined}
           >
             {link.value.toUpperCase()}
+            {link.external && <span className="nav__link-arrow">-&gt;</span>}
           </Link>
         </li>
       ))}
