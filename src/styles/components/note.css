@@ -8,4 +8,18 @@
 .note__text {
   color: var(--color-foreground-primary);
   font-size: var(--font-size-sm) !important;
+
+  a {
+    font-size: inherit;
+    color: inherit;
+
+    &:hover {
+      color: var(--color-foreground-primary-hover);
+    }
+  }
+}
+
+.note__prefix {
+  font-weight: var(--font-weight-semibold);
+  padding-right: var(--spacing-2);
 }

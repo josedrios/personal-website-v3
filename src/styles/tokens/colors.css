@@ -49,6 +49,7 @@
 
   /* backgrounds  */
   --color-background-default: hsl(var(--gray-1100));
+  --color-background-default-subtle: hsl(var(--gray-900));
   --color-background-primary: hsl(var(--yellow-400));
   --color-background-primary-subtle: hsla(var(--yellow-400), 0.1);
 

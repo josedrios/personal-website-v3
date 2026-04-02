@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Link from "next/link";
 
 export type Project = {
   image: File;
@@ -18,12 +19,15 @@ const test = {
 
 export function ProjectCard() {
   return (
-    <div className="project-card">
-      <Header type={2}>{test.title}</Header>
+    <Link href={"/"} className="project-card">
+      <div className="project-card__header">
+        <Header type={2}>{test.title}</Header>
+        <span className="project-card__header-suffix">-&gt;</span>
+      </div>
       <div className="project-card__image" />
       <Skills skills={test.skills} />
       <p className="project-card__description">{test.description}</p>
-    </div>
+    </Link>
   );
 }
 

@@ -1,5 +1,7 @@
 import Header from "@/components/Header";
-import { ProjectCard } from "@/components/Project-Card";
+import Note from "@/components/Note";
+import { ProjectCard } from "@/components/ProjectCard";
+import Link from "next/link";
 
 export default function Projects() {
   return (
@@ -8,6 +10,16 @@ export default function Projects() {
       <ProjectCard />
       <ProjectCard />
       <ProjectCard />
+      <Note>
+        The rest of my projects can be found on my{" "}
+        <Link
+          target="_blank"
+          rel="noopener noreferrer"
+          href={"https://github.com/josedrios"}
+        >
+          Github
+        </Link>
+      </Note>
     </main>
   );
 }
