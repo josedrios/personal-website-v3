@@ -44,12 +44,6 @@ main {
   }
 }
 
-@media (max-width: 500px) {
-  html {
-    padding: var(--spacing-5) !important;
-  }
-}
-
 @media (max-width: 360px) {
   main {
     margin-top: var(--spacing-5);

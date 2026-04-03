@@ -5,6 +5,7 @@ button {
   text-decoration-thickness: 2px;
   text-decoration-color: var(--color-foreground-primary);
   padding: 0 var(--spacing-1px);
+  text-wrap: nowrap;
 
   &:hover {
     color: var(--color-foreground-primary);

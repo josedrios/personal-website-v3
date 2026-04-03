@@ -60,6 +60,7 @@
 }
 
 .nav__binary-container {
+  flex: 1;
   border: 2px solid var(--color-border-default);
   height: auto;
   width: 100%;
@@ -91,13 +92,13 @@
 }
 
 /* Media Queries */
-@media (max-width: 360px) {
+@media (max-width: 500px) {
   .nav__body {
     flex-direction: column;
   }
 
   .nav__binary-container {
-    height: 100px;
+    min-height: 100px;
   }
 
   .nav__links {

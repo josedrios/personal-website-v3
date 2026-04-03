@@ -17,8 +17,10 @@ export default function Human() {
         and glasses. And a patchy mustache.
       </p>
       <p>
-        I am really shy or really out going depending the place and time and who
-        I am with. I try to try my best everyday.
+        I am rather introverted but open up rather quick. I think I am a calm
+        presence to be around, I may be completely wrong though so don&apos;t
+        take my word for it. My everyday goal is that I try to try my best
+        everyday.
       </p>
       <Header type={2}>How I Developed an Interest In Coding</Header>
       <p>
@@ -55,9 +57,8 @@ export default function Human() {
         me).
       </p>
       <Note>
-        This list was made with whatever random thoughts I had circulating
-        through my head at the time. I for sure left out many things off this
-        list.
+        I certainly left out many things off this list. I will probably come
+        back to this from time to time to add stuff.
       </Note>
       <Header type={2}>What I Would Like to Be</Header>
       <i>insert image of ned stark</i>
