@@ -1,4 +1,5 @@
 .project-card {
+  margin-bottom: var(--spacing-8);
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -12,7 +13,7 @@
     }
 
     .project-card__image {
-      background-color: gray;
+      filter: brightness(0.7);
     }
   }
 }
@@ -20,8 +21,11 @@
 .project-card__header {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
   align-items: center;
+
+  h2 {
+    text-wrap: wrap;
+  }
 }
 
 .project-card__header-suffix {
@@ -32,12 +36,19 @@
   transition: left 0.1s;
 }
 
-.project-card__image {
-  height: 300px;
+.project-card__image-container {
+  position: relative;
   width: 100%;
-  background-color: darkgray;
   margin-bottom: var(--spacing-3);
-  transition: background-color 0.1s;
+}
+
+.project-card__image {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-position: left;
+  transition: filter 0.15s;
 }
 
 .project-card__skills {
@@ -59,4 +70,21 @@
 .project-card__description {
   color: var(--color-foreground-default-subtle);
   text-wrap: wrap;
+}
+
+/* I only show this link when I need to remove the arrow on the header because its not so responsive on smaller screens. This is then shown to give the user a place to click to go to the github link even tho the entire card is a link */
+.project-card__fake-link {
+  display: none;
+  color: var(--color-foreground-primary);
+}
+
+@media (max-width: 400px) {
+  .project-card__header-suffix {
+    display: none;
+  }
+
+  .project-card__fake-link {
+    display: inline;
+    color: var(--color-foreground-primary);
+  }
 }
