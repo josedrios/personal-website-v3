@@ -1,32 +1,17 @@
 import Header from "@/components/Header";
 import Link from "next/link";
+import type { ProjectType } from "@/lib/data/projects";
 
-export type Project = {
-  image: File;
-  title: string;
-  date: string;
-  description: string;
-  skills: string[];
-};
-
-const test = {
-  title: "The Test Project",
-  date: "September 2025",
-  description:
-    "This is a description for the test project, the one and only. I don't think you've realized by now so let me tell you. This is one of the most projects of all time. It won an award for being a project, because it has project features.",
-  skills: ["Next.js", "CSS", "Git", "Blood", "Sweat", "Tears"],
-};
-
-export function ProjectCard() {
+export function ProjectCard({ project }: { project: ProjectType }) {
   return (
     <Link href={"/"} className="project-card">
       <div className="project-card__header">
-        <Header type={2}>{test.title}</Header>
+        <Header type={2}>{project.title}</Header>
         <span className="project-card__header-suffix">-&gt;</span>
       </div>
       <div className="project-card__image" />
-      <Skills skills={test.skills} />
-      <p className="project-card__description">{test.description}</p>
+      <Skills skills={project.skills} />
+      <p className="project-card__description">{project.description}</p>
     </Link>
   );
 }

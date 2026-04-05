@@ -58,4 +58,5 @@
 
 .project-card__description {
   color: var(--color-foreground-default-subtle);
+  text-wrap: wrap;
 }

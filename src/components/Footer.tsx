@@ -14,6 +14,7 @@ export default function Footer() {
 
 function Links() {
   return (
+    // NOTE: I did not use the links from /lib/data, ... sue me
     <ul className="footer__links">
       <li>
         <button
