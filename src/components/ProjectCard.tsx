@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Link from "next/link";
-import type { ProjectType } from "@/lib/data/projects";
+import type { ProjectType } from "@/lib/projects";
 import Image from "./Image";
 
 export default function ProjectCard({ project }: { project: ProjectType }) {
