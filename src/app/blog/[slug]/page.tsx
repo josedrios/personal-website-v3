@@ -1,6 +1,7 @@
 import { getPostBySlug } from "@/lib/blogs";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Note from "@/components/Note";
+import Image from "@/components/Image";
 import Header from "@/components/Header";
 import { convertDate } from "@/util/dateConverter";
 
@@ -14,6 +15,7 @@ export default async function BlogPost({
 
   const components = {
     Note,
+    Image,
     h1: ({ children }: { children: string }) => (
       <Header type={1}>{children}</Header>
     ),
