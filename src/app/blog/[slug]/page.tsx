@@ -2,7 +2,7 @@ import { getPostBySlug } from "@/lib/blogs";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Note from "@/components/Note";
 import Header from "@/components/Header";
-import React from "react";
+import { convertDate } from "@/util/dateConverter";
 
 export default async function BlogPost({
   params,
@@ -30,6 +30,16 @@ export default async function BlogPost({
       <article>
         <Header type={1}>{post.data.title}</Header>
         <MDXRemote source={post.content} components={components} />
+        <div className="blog__footer">
+          <p className="blog__created">
+            CREATED: {convertDate(post.data.created)}
+          </p>
+          {post.data.updated && (
+            <p className="blog__updated">
+              UPDATED: {convertDate(post.data.updated)}
+            </p>
+          )}
+        </div>
       </article>
     </main>
   );

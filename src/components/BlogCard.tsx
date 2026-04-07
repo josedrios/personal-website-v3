@@ -3,20 +3,17 @@ import Link from "next/link";
 
 export default function BlogCard({
   title,
-  info,
-  date,
+  created,
   href,
 }: {
   title: string;
-  info: string;
-  date: string;
+  created: string;
   href: string;
 }) {
   return (
     <Link className="blog-card" href={href}>
       <h2 className="blog-card__title">{title}</h2>
-      <p className="blog-card__info">{info}</p>
-      <p className="blog-card__date">{convertDate(date)}</p>
+      <p className="blog-card__date">{convertDate(created)}</p>
     </Link>
   );
 }

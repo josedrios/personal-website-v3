@@ -3,10 +3,15 @@ import { useEffect, useState } from "react";
 
 type HeaderProps = {
   type?: number;
+  className?: string;
   children: string;
 };
 
-export default function Header({ type = 1, children: text }: HeaderProps) {
+export default function Header({
+  type = 1,
+  className = "",
+  children: text,
+}: HeaderProps) {
   // For blinking terminal cursor animation (for H1 only)
   const [cursor, setCursor] = useState<boolean>(true);
   useEffect(() => {
@@ -24,7 +29,7 @@ export default function Header({ type = 1, children: text }: HeaderProps) {
 
   if (type === 1) {
     return (
-      <h1>
+      <h1 className={className}>
         <span
           className={`header__prefix ${cursor ? "show-cursor" : "hide-cursor"}`}
         >
@@ -35,14 +40,14 @@ export default function Header({ type = 1, children: text }: HeaderProps) {
     );
   } else if (type === 2) {
     return (
-      <h2>
+      <h2 className={className}>
         <span className="header__prefix">~</span>
         {text}
       </h2>
     );
   } else if (type === 3) {
     return (
-      <h3>
+      <h3 className={className}>
         <span className="header__prefix">~</span>
         {text}
       </h3>

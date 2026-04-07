@@ -7,14 +7,12 @@ export default function Blog() {
   return (
     <main>
       <Header type={1}>My Blog</Header>
-      {/* <p>Blog Count: {blogs.length}</p> */}
       <div className="blog-card__container">
         {blogs.map((blog) => (
           <BlogCard
             href={`/blog/${blog.slug}`}
             title={blog.title}
-            info={blog.info}
-            date={blog.date}
+            created={blog.created}
             key={blog.slug}
           />
         ))}

@@ -18,17 +18,17 @@ export function getSortedPostsData() {
       const fileContents = fs.readFileSync(fullPath, "utf8");
 
       const matterResult = matter(fileContents);
-      const { title, date, info } = matterResult.data;
+      const { title, created, updated } = matterResult.data;
 
       return {
         slug,
         title,
-        date,
-        info,
+        created,
+        updated,
       };
     });
 
-  return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1));
+  return allPostsData.sort((a, b) => (a.created < b.created ? 1 : -1));
 }
 
 export function getPostBySlug(slug: string) {

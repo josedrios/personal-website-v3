@@ -6,12 +6,12 @@ export default function Home() {
   return (
     <main>
       <Header type={1}>It Is I.</Header>
+      <Header type={2}>Who?</Header>
       <Image
         src={"/images/other/me.webp"}
         alt={"A picture of the me with an uncomfortable smile"}
-        note="I don't like taking photos so the only fitting picture I can find is the one I forced myself to take for my LinkedIn profile"
+        note="The only professional image of myself that I could find."
       />
-      <Header type={2}>Who?</Header>
       <p>
         I am Jose De Jesus Rios. I am a human who enjoys spending time with my
         awesome-possum loved ones, creating buffonery through code, physical
