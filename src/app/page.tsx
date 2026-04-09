@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Note from "@/components/Note";
 import Link from "next/link";
 import Image from "@/components/Image";
 
@@ -6,6 +7,11 @@ export default function Home() {
   return (
     <main>
       <Header type={1}>It Is I.</Header>
+      <Note>
+        This website is still under construction but I believe it is suffice
+        enough to deploy. A lot left to work on but its completely functional
+        and working.
+      </Note>
       <Header type={2}>Who?</Header>
       <Image
         src={"/images/other/me.webp"}
