@@ -7,6 +7,7 @@ export default function Home() {
   return (
     <main>
       <Header type={1}>It Is I.</Header>
+      {/* testing so vercel can detect new repo */}
       <Note>
         This website is still under construction but I believe it is suffice
         enough to deploy. A lot left to work on but its completely functional
