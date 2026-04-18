@@ -4,6 +4,19 @@ import Note from "@/components/Note";
 import Image from "@/components/Image";
 import Header from "@/components/Header";
 import { convertDate } from "@/util/dateConverter";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
+  return {
+    title: post.data.title,
+  };
+}
 
 export default async function BlogPost({
   params,

@@ -1,6 +1,12 @@
 import Header from "@/components/Header";
 import Image from "@/components/Image";
 import Note from "@/components/Note";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Human",
+  description: "Let me tell you about myself",
+};
 
 export default function Human() {
   return (

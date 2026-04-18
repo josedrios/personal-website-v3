@@ -1,5 +1,11 @@
 import Header from "@/components/Header";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Converse withe me",
+};
 
 export default function Contact() {
   return (

@@ -1,6 +1,12 @@
 import { getSortedPostsData } from "@/lib/blogs";
 import BlogCard from "@/components/BlogCard";
 import Header from "@/components/Header";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description: "Me slapping random letters on my keyboard",
+};
 
 export default function Blog() {
   const blogs = getSortedPostsData();

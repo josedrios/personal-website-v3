@@ -1,6 +1,12 @@
 import Header from "@/components/Header";
 import Note from "@/components/Note";
 import Image from "@/components/Image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Now",
+  description: "What I am doing at this exact moment",
+};
 
 export default function Now() {
   return (

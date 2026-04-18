@@ -3,6 +3,12 @@ import Note from "@/components/Note";
 import ProjectCard from "@/components/ProjectCard";
 import Link from "next/link";
 import { projects } from "@/lib/projects";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description: "The things I have created",
+};
 
 export default function Projects() {
   return (
