@@ -19,7 +19,7 @@ export default function Human() {
       </p>
       <Header type={2}>Character Creation</Header>
       <Image
-        src="/images/other/bloodborne_character.webp"
+        src="/images/pages/bloodborne_character.webp"
         alt="A bad quality picture of my bloodborne character"
         note="My Bloodborne character"
       />
@@ -42,7 +42,7 @@ export default function Human() {
       </p>
       <Header type={2}>What I Love</Header>
       <Image
-        src="/images/other/zelda.webp"
+        src="/images/pages/zelda.webp"
         alt="A picture of my cousins dog"
         note="This is my cousin's dog, Zelda. Peep the smile."
       />
@@ -75,7 +75,7 @@ export default function Human() {
         this from time to time to add stuff.
       </Note>
       <Header type={2}>What I Would Like to Be</Header>
-      <Image src="/images/other/ned_stark.webp" alt="Ned Stark aura farming" />
+      <Image src="/images/pages/ned_stark.webp" alt="Ned Stark aura farming" />
       <p>
         I am trying to become someone who is kind, loving, hardworking, healthy
         and smart. Like my mom and dad. Obviously I can give a more descriptive

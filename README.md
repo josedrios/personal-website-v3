@@ -34,6 +34,7 @@ Fun. That is my reflection, it was very fun. The feeling of learning something n
 - Working with dynamic routes and their the data thats inherently attached to them (this is the best way I can articulate this idea, don't be afraid if you can't understand that sentence, I am still learning to articulate myself better)
 - Finding good consistent spacings between different types of combination of components
 - Getting the blog system to work (utilizing MDX files to embed custom components and understanding the blog system that I implemented, big thanks to the Next.js docs)
+- Setting the excess website background to be the default background color instead of white when putting the Google Chrome app on landscape (iPhone). This was really annoying. Fix was to change the export viewport component in the main layout.tsx and have a field with viewportFit: "cover".
 
 ### What I Learned
 

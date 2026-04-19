@@ -4,14 +4,13 @@
   box-sizing: border-box;
 }
 
-:root,
 html,
+main,
 body {
   background-color: var(--color-background-default) !important;
   color: var(--color-foreground-default);
 }
 
-body,
 p,
 blockquote,
 figure,

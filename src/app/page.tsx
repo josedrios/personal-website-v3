@@ -30,7 +30,7 @@ function Who() {
     <>
       <Header type={2}>Who?</Header>
       <Image
-        src={"/images/other/me.webp"}
+        src={"/images/pages/me.webp"}
         alt={"A picture of the me with an uncomfortable smile"}
         note="The only professional image of myself that I could find."
       />

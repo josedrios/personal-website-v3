@@ -13,7 +13,7 @@ export default function Now() {
     <main>
       <Header type={1}>Right Now, This Very Second</Header>
       <Image
-        src="/images/other/tony_stark_in_cave.webp"
+        src="/images/pages/tony_stark_in_cave.webp"
         alt="A picture of Tony Stark working on his first iteration of his Iron Man suit. This is meant to be funny because I am using this image to represent what I am hypothetically, possibly doing right now."
         note="For the record, this image is not of me. It is of movie star Robert Downey Jr."
       />
