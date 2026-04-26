@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import Note from "@/components/Note";
 import Link from "next/link";
 import Image from "@/components/Image";
 import BlogCard from "@/components/BlogCard";
@@ -9,12 +8,6 @@ export default function Home() {
   return (
     <main>
       <Header type={1}>It Is I.</Header>
-      {/* testing so vercel can detect new repo */}
-      <Note>
-        This website is still under construction but I believe it is suffice
-        enough to deploy. A lot left to work on but its completely functional
-        and working.
-      </Note>
       <Who />
       <Why />
       <How />
@@ -125,7 +118,7 @@ function Blog() {
         ))}
       </div>
       <p>
-        Find the rest of my blogs <Link href={"/blog"}>here</Link>.
+        The rest of my blogs can be found <Link href={"/blog"}>here</Link>.
       </p>
     </>
   );

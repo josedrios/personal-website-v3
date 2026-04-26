@@ -28,6 +28,7 @@ export default async function BlogPost({
   const post = getPostBySlug(slug);
 
   const components = {
+    // TODO: add code block here
     Note,
     Image,
     a: ({ href, children }: { href: string; children: React.ReactNode }) => (

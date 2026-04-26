@@ -1,0 +1,4 @@
+/* TODO: style code block to liking (as well as toolbar etc) */
+.code-block {
+  margin: var(--spacing-3) 0;
+}
