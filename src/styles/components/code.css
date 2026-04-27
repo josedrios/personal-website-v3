@@ -1,4 +1,31 @@
-/* TODO: style code block to liking (as well as toolbar etc) */
-.code-block {
+.code-block-container {
+  position: relative;
+  width: 100%;
   margin: var(--spacing-3) 0;
+}
+
+.code-block {
+  border: 1px solid var(--color-border-default-subtle) !important;
+  border-radius: 0px !important;
+}
+
+code {
+  margin-bottom: var(--spacing-1);
+}
+
+.code-block-language {
+  position: absolute;
+  margin: 0 !important;
+  padding: 0 !important;
+  right: var(--spacing-1_5);
+  bottom: var(--spacing-1);
+  color: var(--color-foreground-default-subtle);
+  font-size: var(--font-size-xxs);
+}
+
+/* Fix Prismjs selection highlight colors */
+.code-block::selection,
+.code-block *::selection {
+  background: var(--color-background-primary) !important;
+  color: black !important;
 }
