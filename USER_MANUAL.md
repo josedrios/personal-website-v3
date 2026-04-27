@@ -14,6 +14,17 @@ Just a couple reminders when blogging.
 6. Use <Image></Image> to add images and the src should be the path the image like "/images/blogs/image_name.webp".
 7. ALWAYS INCLUDE AN ALT WITH IMAGES IF USED.
 
+### Components
+
+code
+use ;; for new line
+has to be text="..."
+if you want to use " inside do &quot;
+
+note
+
+quote
+
 ## Public Folder Organization
 
 Divided into three sections:

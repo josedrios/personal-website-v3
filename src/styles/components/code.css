@@ -9,18 +9,37 @@
   border-radius: 0px !important;
 }
 
-code {
-  margin-bottom: var(--spacing-1);
+.code-block-language {
+  font-size: var(--font-size-xxs);
+  text-align: right;
+  padding: 0;
+  margin-top: var(--spacing-1);
+}
+
+.code-block-copy {
+  padding: var(--spacing-1_5) var(--spacing-2) !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  visibility: hidden;
+  font-size: var(--font-size-xxs);
+  color: var(--color-background-primary);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.code-block-container:hover {
+  .code-block-copy {
+    visibility: visible;
+  }
 }
 
 .code-block-language {
-  position: absolute;
-  margin: 0 !important;
-  padding: 0 !important;
-  right: var(--spacing-1_5);
-  bottom: var(--spacing-1);
+  bottom: var(--spacing-1_5);
   color: var(--color-foreground-default-subtle);
-  font-size: var(--font-size-xxs);
 }
 
 /* Fix Prismjs selection highlight colors */

@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import { convertDate } from "@/util/dateConverter";
 import { Metadata } from "next";
 import Link from "next/link";
+import Code from "@/components/Code";
 
 export async function generateMetadata({
   params,
@@ -28,7 +29,7 @@ export default async function BlogPost({
   const post = getPostBySlug(slug);
 
   const components = {
-    // TODO: add code block here
+    Code,
     Note,
     Image,
     a: ({ href, children }: { href: string; children: React.ReactNode }) => (

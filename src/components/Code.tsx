@@ -1,18 +1,18 @@
 "use client";
 
-import { useEffect } from "react";
-
+import { useEffect, useState } from "react";
 import Prism from "prismjs";
 // Prismjs theme
 import "automad-prism-themes/dist/prism-automad-dark.css";
 // Import all languages that will be used through this code snippet component
-import "prismjs/components/prism-typescript";
 import "prismjs/components/prism-python";
+import "prismjs/components/prism-bash";
+import "prismjs/components/prism-java";
 // Import for line numbers
 import "prismjs/plugins/line-numbers/prism-line-numbers.js";
 import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 
-// CURRENT: add copy code button
+// MAKE LINE COUNT TOGGLABLE (disabled on 1 liners)
 
 export default function Code({
   text,
@@ -21,16 +21,38 @@ export default function Code({
   text: string;
   language: string;
 }) {
+  const [copied, setCopied] = useState<boolean>(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(text);
+    setCopied(true);
+    // wait 3 sec to turn it back
+    setTimeout(() => setCopied(false), 3000);
+  };
+
   useEffect(() => {
     Prism.highlightAll();
   }, [text, language]);
 
+  // Got the the line below from AI, wasnt able to get multiline
+  // strings and escaping (like \n) working inside MDX files because of
+  // the specific mdx parser I am using for dynamic data, this line below
+  // allows me to convert ;; into a line break
+  const normalized = text.replace(/;;/g, "\n").trim();
+  const lineCount = normalized.split("\n").length;
+
   return (
     <div className="code-block-container">
       <pre className="code-block">
-        <code className={`language-${language} line-numbers`}>{text}</code>
+        <code
+          className={`language-${language} ${lineCount === 1 ? "no-line-numbers" : "line-numbers"}`}
+        >
+          {normalized}
+        </code>
       </pre>
-      {/* add copy button that shows on hover (absolute - top right - make sure to add min height for code block so coyp and language dont over lap */}
+      <button onClick={() => handleCopy()} className="code-block-copy">
+        {copied ? "COPIED" : "COPY"}
+      </button>
       <p className="code-block-language">{language.toUpperCase()}</p>
     </div>
   );
