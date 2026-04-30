@@ -35,6 +35,7 @@ Fun. That is my reflection, it was very fun. The feeling of learning something n
 - Finding good consistent spacings between different types of combination of components
 - Getting the blog system to work (utilizing MDX files to embed custom components and understanding the blog system that I implemented, big thanks to the Next.js docs)
 - Setting the excess website background to be the default background color instead of white when putting the Google Chrome app on landscape (iPhone). This was really annoying. Fix was to change the export viewport component in the main layout.tsx and have a field with viewportFit: "cover".
+- Getting multiline string arguments to work inside my MDX files. Implemented a work around where I use ;; inside the string and the component that takes it in processes it as a line break.
 
 ### What I Learned
 

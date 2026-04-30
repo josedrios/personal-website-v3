@@ -7,6 +7,7 @@ import { convertDate } from "@/util/dateConverter";
 import { Metadata } from "next";
 import Link from "next/link";
 import Code from "@/components/Code";
+import Quote from "@/components/Quote";
 
 export async function generateMetadata({
   params,
@@ -31,6 +32,7 @@ export default async function BlogPost({
   const components = {
     Code,
     Note,
+    Quote,
     Image,
     a: ({ href, children }: { href: string; children: React.ReactNode }) => (
       <Link href={href} target="_blank" rel="noopener noreferrer">

@@ -14,16 +14,36 @@ Just a couple reminders when blogging.
 6. Use <Image></Image> to add images and the src should be the path the image like "/images/blogs/image_name.webp".
 7. ALWAYS INCLUDE AN ALT WITH IMAGES IF USED.
 
+### Links
+
+Links will automatically open in a new tab. Just make sure to follow the syntax in MDX files:
+
+[Link Title Shown](the actual link)
+
 ### Components
+Make sure the arguments passed to the these components are as param="..." because MDX has a hard time parsing with {}
 
-code
-use ;; for new line
-has to be text="..."
-if you want to use " inside do &quot;
+#### Code
+Must pass text (the code that will be displayed) and language of the text. Not as children but as string arguments through the component.
 
-note
+For line breaks use ;;
 
-quote
+I tried many different ways but I just ended up settling with using ;; for line breaks. The component will automatically register the ;; text as line breaks.
+
+If you want to use " inside a pair of "...", use &quot; instead
+
+#### Note
+The actual text of the note is passed inside the tag as a child.
+
+If you want to change the title (NOTE part) of the note you can pass an argument in for it (ex. title="Alert"). THIS IS OPTIONAL
+
+If you want to really distinguish this note block in a dangerous light, pass the danger param so that the note utilizes a red color scheme (ex <Note danger>...). It is a boolean.
+
+#### Quote
+
+The actual quote for this block is passed inside the tag as a child.
+
+The author is passed as a string param through the component (ex. <Quote author="Jon Bernthal">I hate naps</Quote>)
 
 ## Public Folder Organization
 
@@ -55,3 +75,9 @@ Consistency among dithered images would be best. The dither type doesn't have to
 3. Look at 'Color Dither' section
 4. Choose a dither algorithm (ex. Yliluoma Bayer 2x2)
 5. Export image as .webp
+
+## Lowering Quality of Images
+
+To conserve space you can lower the quality of images with this website
+
+https://lowqualityimage.org/

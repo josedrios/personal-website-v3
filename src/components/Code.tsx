@@ -24,7 +24,7 @@ export default function Code({
   const [copied, setCopied] = useState<boolean>(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(text);
+    navigator.clipboard.writeText(normalized);
     setCopied(true);
     // wait 3 sec to turn it back
     setTimeout(() => setCopied(false), 3000);
@@ -43,8 +43,9 @@ export default function Code({
 
   return (
     <div className="code-block-container">
-      <pre className="code-block">
+      <pre suppressHydrationWarning className="code-block">
         <code
+          suppressHydrationWarning
           className={`language-${language} ${lineCount === 1 ? "no-line-numbers" : "line-numbers"}`}
         >
           {normalized}

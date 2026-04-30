@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import "@/styles/main.css";
 import { JetBrains_Mono } from "next/font/google";
 import Nav from "@/components/Nav";
@@ -51,12 +52,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={jetbrains.className}>
-      <body>
-        <Nav />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <>
+      <Analytics />
+      <html lang="en" className={jetbrains.className}>
+        <body>
+          <Nav />
+          {children}
+          <Footer />
+        </body>
+      </html>
+    </>
   );
 }
