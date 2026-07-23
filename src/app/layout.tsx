@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import "@/styles/main.css";
-import { JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono, TASA_Orbiter } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
-const jetbrains = JetBrains_Mono({});
+const jetbrains = JetBrains_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"]
+});
+
+const tasaorbiter = TASA_Orbiter({
+  variable: "--font-default",
+  subsets: ["latin"]
+});
+
 
 export const viewport = {
   viewportFit: "cover",
@@ -54,7 +63,7 @@ export default function RootLayout({
   return (
     <>
       <Analytics />
-      <html lang="en" className={jetbrains.className}>
+      <html lang="en" className={`${jetbrains.variable} ${tasaorbiter.variable}`}>
         <body>
           <Nav />
           {children}

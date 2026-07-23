@@ -10,15 +10,6 @@ export type ProjectType = {
 // TODO: Clean up data here / update it
 export const projects: ProjectType[] = [
   {
-    title: "Gamer Cred Website",
-    link: "https://github.com/josedrios/gamers-cred",
-    skills: ["React.js", "Express.js", "Node.js", "MongoDB", "Sass", "Git"],
-    description:
-      "This gamer cred website will help players rate games from scores derived from the community. They can also add these gamer cred scores to their own account to accumulate a higher gamer cred score attached to their name. This project is a work in progress.",
-    date: "July 2025",
-    image: "/images/projects/gamer_cred.webp",
-  },
-  {
     title: "Silver Minded",
     link: "https://github.com/josedrios/silver-minded",
     skills: [

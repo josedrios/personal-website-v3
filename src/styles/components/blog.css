@@ -52,6 +52,7 @@ article ol {
 
 .blog__created,
 .blog__updated {
+  font-family: var(--font-mono);
   padding: 0;
   font-size: var(--font-size-sm);
   color: var(--color-foreground-default-subtle);

@@ -75,7 +75,7 @@
 
 .nav__binary-container {
   flex: 1;
-  border: 2px solid var(--color-border-default);
+  border: 1px solid var(--color-border-default);
   height: auto;
   width: 100%;
   position: relative;
@@ -88,12 +88,12 @@
   overflow: hidden;
   overflow-wrap: break-word;
   margin: 0;
-  padding-top: var(--spacing-1);
 }
 
 .binary-digit {
+  font-family: var(--font-mono);
   color: var(--color-foreground-default-subtle);
-  padding: var(--spacing-0_5);
+  padding: 2px;
 
   @media (hover: hover) {
     &:hover {

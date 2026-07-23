@@ -4,7 +4,8 @@
   --yellow-200: 47, 100%, 85%;
   --yellow-300: 47, 100%, 70%;
   --yellow-400: 47, 100%, 60%;
-  --yellow-500: 47, 100%, 50%; /* base */
+  --yellow-500: 47, 100%, 50%;
+  /* base */
   --yellow-600: 47, 100%, 40%;
   --yellow-700: 47, 100%, 30%;
   --yellow-800: 47, 100%, 20%;
@@ -32,14 +33,16 @@
   --red-200: 4, 100%, 85%;
   --red-300: 4, 100%, 70%;
   --red-400: 4, 100%, 60%;
-  --red-500: 4, 100%, 50%; /* base */
+  --red-500: 4, 100%, 50%;
+  /* base */
   --red-600: 4, 100%, 40%;
   --red-700: 4, 100%, 30%;
   --red-800: 4, 100%, 20%;
   --red-900: 4, 100%, 15%;
 
   /* foregrounds */
-  --color-foreground-default: white;
+  --color-foreground-default-emphasis: white;
+  --color-foreground-default: hsl(var(--gray-200));
   --color-foreground-default-subtle: hsl(var(--gray-400));
   --color-foreground-default-inverted: hsl(var(--gray-1000));
   --color-foreground-primary: hsl(var(--yellow-400));

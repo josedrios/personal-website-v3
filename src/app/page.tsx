@@ -118,7 +118,7 @@ function Blog() {
         ))}
       </div>
       <p>
-        The rest of my blogs can be found <Link href={"/blog"}>here</Link>.
+        Read more of my blogs <Link href={"/blog"}>here</Link>.
       </p>
     </>
   );

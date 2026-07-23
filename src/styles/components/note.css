@@ -6,6 +6,7 @@
 }
 
 .note__text {
+  font-family: var(--font-mono) !important;
   color: var(--color-foreground-primary);
   font-size: var(--font-size-sm) !important;
 
