@@ -3,10 +3,11 @@ import Link from "next/link";
 import Image from "@/components/Image";
 import BlogCard from "@/components/BlogCard";
 import { getSortedPostsData } from "@/lib/blogs";
+import FadeIn from "@/components/FadeIn";
 
 export default function Home() {
   return (
-    <main>
+    <FadeIn main>
       <Header type={1}>It Is I.</Header>
       <Who />
       <Why />
@@ -14,7 +15,7 @@ export default function Home() {
       <Recommendation />
       <Apology />
       <Blog />
-    </main>
+    </FadeIn>
   );
 }
 

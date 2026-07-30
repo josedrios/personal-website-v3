@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Link from "next/link";
 import { Metadata } from "next";
+import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Contact() {
   return (
-    <main>
+    <FadeIn main>
       <Header type={1}>Send Me a Pigeon</Header>
       <p>
         If you can send me a pigeon please do. If you can&apos;t I guess you can
@@ -23,6 +24,6 @@ export default function Contact() {
           josederios@outlook.com
         </Link>
       </p>
-    </main>
+    </FadeIn>
   );
 }

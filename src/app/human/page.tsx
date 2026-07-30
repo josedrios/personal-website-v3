@@ -1,3 +1,4 @@
+import FadeIn from "@/components/FadeIn";
 import Header from "@/components/Header";
 import Image from "@/components/Image";
 import Note from "@/components/Note";
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Human() {
   return (
-    <main>
+    <FadeIn main>
       <Header type={1}>Get To Know My Inner Workings</Header>
       <p>
         By inner workings I mean who I am, what I like, etc. Let this page serve
@@ -81,6 +82,6 @@ export default function Human() {
         and smart. Like my mom and dad. Obviously I can give a more descriptive
         and detailed response but in all honestly it just boils down to that.
       </p>
-    </main>
+    </FadeIn>
   );
 }

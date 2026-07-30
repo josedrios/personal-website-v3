@@ -3,6 +3,7 @@ import BlogCard from "@/components/BlogCard";
 import Header from "@/components/Header";
 import { Metadata } from "next";
 import Note from "@/components/Note";
+import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
 export default function Blog() {
   const blogs = getSortedPostsData();
   return (
-    <main>
+    <FadeIn main>
       <Header type={1}>My Blog</Header>
       <Note title="disclaimer">
         This is a very unserious, all over the place, typo infested blog page. I
@@ -28,6 +29,6 @@ export default function Blog() {
           />
         ))}
       </div>
-    </main>
+    </FadeIn>
   );
 }

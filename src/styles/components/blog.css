@@ -16,7 +16,7 @@ article ol {
   margin: var(--spacing-7) 0;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-10);
+  gap: var(--spacing-7);
 }
 
 .blog-card {
@@ -26,6 +26,10 @@ article ol {
   gap: var(--spacing-1);
   text-decoration: none;
   text-wrap: wrap;
+}
+
+.blog-card:hover .blog-card__title {
+  color: var(--color-foreground-primary);
 }
 
 .blog-card__title,

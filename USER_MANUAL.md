@@ -21,16 +21,20 @@ Links will automatically open in a new tab. Just make sure to follow the syntax 
 [Link Title Shown](the actual link)
 
 ### Components
-Make sure the arguments passed to the these components are as param="..." because MDX has a hard time parsing with {}
+Make sure the arguments passed to the these components are as param="..." because MDX has a hard time parsing with param={...}
 
 #### Code
 Must pass text (the code that will be displayed) and language of the text. Not as children but as string arguments through the component.
+
+If you want to use " inside a pair of "...", use &quot; instead
 
 For line breaks use ;;
 
 I tried many different ways but I just ended up settling with using ;; for line breaks. The component will automatically register the ;; text as line breaks.
 
-If you want to use " inside a pair of "...", use &quot; instead
+
+How to use:
+<Code text="goodbye = &quot;Catch you on the flip side&quot; ;;# Me commenting in my code snippet like a pro;;print(goodbye)" language="python"/>
 
 #### Note
 The actual text of the note is passed inside the tag as a child.
@@ -38,6 +42,11 @@ The actual text of the note is passed inside the tag as a child.
 If you want to change the title (NOTE part) of the note you can pass an argument in for it (ex. title="Alert"). THIS IS OPTIONAL
 
 If you want to really distinguish this note block in a dangerous light, pass the danger param so that the note utilizes a red color scheme (ex <Note danger>...). It is a boolean.
+
+HOW TO USE:
+<Note>Message</Note>
+
+If you want to change the title pass in a argument for the title parameter. If you want to add the danger toggle to turn it into a danger note pass in the proper argument as well.
 
 #### Quote
 

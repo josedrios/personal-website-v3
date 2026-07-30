@@ -8,6 +8,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Code from "@/components/Code";
 import Quote from "@/components/Quote";
+import FadeIn from "@/components/FadeIn";
 
 export async function generateMetadata({
   params,
@@ -51,7 +52,7 @@ export default async function BlogPost({
   };
 
   return (
-    <main>
+    <FadeIn main>
       <article>
         <Header type={1}>{post.data.title}</Header>
         <MDXRemote source={post.content} components={components} />
@@ -66,7 +67,7 @@ export default async function BlogPost({
           )}
         </div>
       </article>
-    </main>
+    </FadeIn>
   );
 }
 

@@ -4,6 +4,7 @@ import ProjectCard from "@/components/ProjectCard";
 import Link from "next/link";
 import { projects } from "@/lib/projects";
 import { Metadata } from "next";
+import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function Projects() {
   return (
-    <main>
+    <FadeIn main>
       <Header type={1}>Projects</Header>
 
       {projects.map((project) => (
@@ -28,6 +29,6 @@ export default function Projects() {
           Github
         </Link>
       </Note>
-    </main>
+    </FadeIn>
   );
 }

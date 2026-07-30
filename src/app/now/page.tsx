@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Note from "@/components/Note";
 import Image from "@/components/Image";
 import { Metadata } from "next";
+import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Now",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Now() {
   return (
-    <main>
+    <FadeIn main>
       <Header type={1}>Right Now, This Very Second</Header>
       <Image
         src="/images/pages/tony_stark_in_cave.webp"
@@ -19,7 +20,7 @@ export default function Now() {
       />
       <Content />
       <Note>Updated last on June 26, 2026</Note>
-    </main>
+    </FadeIn>
   );
 }
 
